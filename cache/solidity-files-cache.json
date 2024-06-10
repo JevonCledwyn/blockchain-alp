@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "E:\\Universitas Ciputra\\Informatika\\SMT 6\\Blockchain\\ALP\\blockchain-alp\\contracts\\CoffeeSupplyChain.sol": {
-      "lastModificationDate": 1717945149098,
+    "/Users/williamwongge/ucsemester6/Blockchain/blockchain-alp/contracts/CoffeeSupplyChain.sol": {
+      "lastModificationDate": 1718002158154,
       "contentHash": "4740bb6010c2405cf0c71c9ab58bdea6",
       "sourceName": "contracts/CoffeeSupplyChain.sol",
       "solcConfig": {

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Get Batch Details</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <% if (details) { %>
+      <h3 class="mt-5">Batch Details</h3>
+      <ul>
+        <li>ID: <%= details[0] %></li>
+        <li>Details: <%= details[1] %></li>
+        <li>Owner: <%= details[2] %></li>
+        <li>State: <%= details[3] %></li>
+        <li>History: <%= details[4].join(', ') %></li>
+      </ul>
+      <% } %>
+    </div>
+  </body>
+</html>

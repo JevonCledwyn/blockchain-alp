@@ -5,9 +5,5 @@ import contractAddress from "../contracts/contract-address.json" assert { type: 
 const provider = new ethers.JsonRpcProvider("http://localhost:8545");
 
 export async function constructSmartContract() {
-  const signer = provider.getSigner();
-  if (!contractAddress.CoffeeSupplyChain) {
-    throw new Error("Contract address is not defined in contract-address.json");
-  }
-  return new ethers.Contract(contractAddress.CoffeeSupplyChain, CoffeeSupplyChainArtifact.abi, signer);
+  return (new ethers.Contract(ethers.getAddress(contractAddress.CoffeeSupplyChain), CoffeeSupplyChainArtifact.abi, await provider.getSigner(0)));
 }
