@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <title>Coffee Supply Chain</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #6f4e37;
+        }
+        .list-group-item {
+            font-size: 18px;
+            color: #6f4e37;
+            font-weight: bold;
+        }
+        .list-group-item a {
+            color: #6f4e37;
+            text-decoration: none;
+        }
+        .list-group-item:hover {
+            background-color: #f0e4d7;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
-    <h1>Coffee Supply Chain Management</h1>
+    <h1 class="text-center">Coffee Supply Chain Management</h1>
     <ul class="list-group mt-4">
         <li class="list-group-item"><a href="/addBatch">Add Batch</a></li>
         <li class="list-group-item"><a href="/updateState">Update Batch State</a></li>
@@ -15,5 +41,8 @@
         <li class="list-group-item"><a href="/getBatchDetails">Get Batch Details</a></li>
     </ul>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

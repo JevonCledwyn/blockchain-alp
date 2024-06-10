@@ -7,10 +7,38 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+      h2 {
+        color: #000000;
+        margin-bottom: 30px;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .btn-primary {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+      }
+    </style>
   </head>
   <body>
     <div class="container mt-5">
-      <h2>Get Batch Details</h2>
+      <h2 class="text-center">Get Batch Details</h2>
       <form action="/getBatchDetailsProcess" method="post">
         <div class="form-group">
           <label for="batchId">Batch ID</label>
@@ -19,11 +47,15 @@
             class="form-control"
             id="batchId"
             name="batchId"
+            placeholder="Enter Batch ID"
             required
           />
         </div>
         <button type="submit" class="btn btn-primary">Get Details</button>
       </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

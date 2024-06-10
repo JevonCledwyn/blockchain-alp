@@ -7,19 +7,52 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+      h3 {
+        color: #000000;
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        background-color: #f0e4d7;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <div class="container mt-5">
       <% if (details) { %>
-      <h3 class="mt-5">Batch Details</h3>
+      <h3 class="text-center">Batch Details</h3>
       <ul>
-        <li>ID: <%= details[0] %></li>
-        <li>Details: <%= details[1] %></li>
-        <li>Owner: <%= details[2] %></li>
-        <li>State: <%= details[3] %></li>
-        <li>History: <%= details[4].join(', ') %></li>
+        <li><strong>ID:</strong> <%= details[0] %></li>
+        <li><strong>Details:</strong> <%= details[1] %></li>
+        <li><strong>Owner:</strong> <%= details[2] %></li>
+        <li><strong>State:</strong> <%= details[3] %></li>
+        <li><strong>History:</strong> <%= details[4].join(', ') %></li>
       </ul>
       <% } %>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

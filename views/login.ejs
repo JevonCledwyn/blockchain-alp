@@ -4,33 +4,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Voting System</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .login-container h1 {
+        margin-bottom: 30px;
+      }
+      .login-container .form-group input {
+        height: 45px;
+        font-size: 16px;
+      }
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container" style="width: 650px;">
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="text-center">Login</h1>
-          <hr/>
-          <div id="content">
-            <form method="POST" action="auth">
-              <div class="form-group">
-                Address: <input type="text" name="address" placeholder="Address" required><br/>
-                Password: <input type="password" name="password" placeholder="Password" required><br/>
-              </div>
-              <button type="submit" class="btn btn-primary">Login</button>
-              <hr />
-            </form>
-          </div>
+    <div class="login-container">
+      <h1 class="text-center">Login</h1>
+      <form method="POST" action="auth">
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

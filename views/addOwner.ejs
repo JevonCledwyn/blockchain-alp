@@ -7,23 +7,52 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+      h2 {
+        color: #000000;
+        margin-bottom: 30px;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .btn-primary {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+      }
+    </style>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body>
     <div class="container mt-5">
-      <h2>Add Owner</h2>
+      <h2 class="text-center">Add Owner</h2>
       <form id="addOwnerForm" method="POST" action="registration">
         <div class="form-group">
-          <div class="form-group">
-            <label for="name">Owner Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
+          <label for="name">Owner Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Enter Owner Name"
+            required
+          />
+        </div>
+        <div class="form-group">
           <label for="occupation">Occupation</label>
           <select
             class="form-control"
@@ -44,16 +73,18 @@
             class="form-control"
             id="addr"
             name="addr"
+            placeholder="Enter Owner Address"
             required
           />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
           <input
-            type="text"
+            type="password"
             class="form-control"
             id="password"
             name="password"
+            placeholder="Enter Password"
             required
           />
         </div>
@@ -69,6 +100,7 @@
             name: $("#name").val(),
             occupation: $("#occupation").val(),
             addr: $("#addr").val(),
+            password: $("#password").val(),
           };
           $.ajax({
             url: "/addOwner",

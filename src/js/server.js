@@ -60,6 +60,8 @@ app.get('/updateState', (req, res) => {
   res.render('updateState');
 });
 
+
+
 app.post('/updateStateProcess', async (req, res) => {
   const batchId = req.body.batchId;
   const state = req.body.state;
