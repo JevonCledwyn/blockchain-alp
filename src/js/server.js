@@ -60,24 +60,33 @@ app.get('/updateState', (req, res) => {
   res.render('updateState');
 });
 
-app.post('/updateState', async (req, res) => {
+app.post('/updateStateProcess', async (req, res) => {
   const batchId = req.body.batchId;
   const state = req.body.state;
-  const tx = await RC.updateState(batchId, state);
-  await tx.wait();
-  res.redirect('/');
+  try {
+    const tx = await RC.updateState(batchId, state);
+    res.redirect('/index');
+  } catch(error) {
+    console.error('Error updating state:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get('/transferOwnership', (req, res) => {
   res.render('transferOwnership');
 });
 
-app.post('/transferOwnership', async (req, res) => {
+app.post('/transferOwnershipProcess', async (req, res) => {
   const batchId = req.body.batchId;
   const newOwner = req.body.newOwner;
-  const tx = await RC.transferOwnership(batchId, newOwner);
-  await tx.wait();
-  res.redirect('/');
+  
+  try {
+    const tx = await RC.transferOwnership(batchId, newOwner);
+    res.redirect('/index');
+  } catch(error) {
+    console.error('Error transfering ownership:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get('/getBatchHistory', (req, res) => {
