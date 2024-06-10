@@ -14,25 +14,40 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        margin: 0;
       }
       .container {
         background-color: #ffffff;
-        padding: 30px;
+        padding: 40px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         max-width: 600px;
       }
       h2 {
-        color: #000000;
+        color: #333333;
         margin-bottom: 30px;
       }
       .form-group label {
         font-weight: bold;
+        color: #555555;
+      }
+      .form-control {
+        border-radius: 5px;
       }
       .btn-primary {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      .footer {
+        margin-top: 30px;
+        text-align: center;
+        color: #777777;
       }
     </style>
   </head>
@@ -62,6 +77,9 @@
         </div> -->
         <button type="submit" class="btn btn-primary">Add Batch</button>
       </form>
+      <div class="footer">
+        &copy; ALP - Blockchain - Coffee Supply Chain
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

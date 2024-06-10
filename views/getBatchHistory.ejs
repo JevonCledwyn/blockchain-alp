@@ -4,6 +4,61 @@
     <meta charset="UTF-8">
     <title>Get Batch History</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        h2, h3 {
+            color: #333333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #555555;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f0e4d7;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777777;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
@@ -11,7 +66,7 @@
     <form action="/getBatchHistory" method="post">
         <div class="form-group">
             <label for="batchId">Batch ID</label>
-            <input type="text" class="form-control" id="batchId" name="batchId" required>
+            <input type="text" class="form-control" id="batchId" name="batchId" placeholder="Enter Batch ID" required>
         </div>
         <button type="submit" class="btn btn-primary">Get History</button>
     </form>
@@ -23,6 +78,9 @@
             <% }) %>
         </ul>
     <% } %>
+    <div class="footer">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
 </div>
 </body>
 </html>

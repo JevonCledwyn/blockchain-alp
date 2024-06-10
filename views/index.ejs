@@ -7,20 +7,28 @@
     <style>
         body {
             background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container {
             background-color: #ffffff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
         }
         h1 {
             color: #6f4e37;
+            margin-bottom: 30px;
         }
         .list-group-item {
             font-size: 18px;
             color: #6f4e37;
             font-weight: bold;
+            transition: background-color 0.3s ease;
         }
         .list-group-item a {
             color: #6f4e37;
@@ -28,6 +36,11 @@
         }
         .list-group-item:hover {
             background-color: #f0e4d7;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777777;
         }
     </style>
 </head>
@@ -40,6 +53,9 @@
         <li class="list-group-item"><a href="/transferOwnership">Transfer Batch Ownership</a></li>
         <li class="list-group-item"><a href="/getBatchDetails">Get Batch Details</a></li>
     </ul>
+    <div class="footer">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
