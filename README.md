@@ -1,6 +1,11 @@
 ## Prerequisites
 Run `setup.sh`
+
 ## db
+Run `npx prisma generate`
+
+Run `npx prisma db push`
+
 Run `npx prisma studio`
 
 Run `npx hardhat compile`
@@ -14,6 +19,7 @@ Run `npx hardhat run scripts/deploy.cjs --network localhost`
 
 ## Test
 Run `npx hardhat test`
+
 
 Open new tab, run `npm run start`
 
